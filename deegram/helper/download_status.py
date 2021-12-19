@@ -22,7 +22,7 @@ class DownloadStatus:
         return self._current / (time.time() - self._start_time)
 
     async def start(self) -> None:
-        self._message = await self._event.reply("Downloading...")
+        self._message = await self._event.reply("`🎸Dᴏᴡɴʟᴏᴀᴅɪɴɢ...💞Pʟᴢ Wᴀɪᴛ`")
         self._start_time = time.time()
         self._task = bot.loop.create_task(self._on_progress())
 
@@ -32,8 +32,8 @@ class DownloadStatus:
                 if self._total:
                     try:
                         await self._message.edit(
-                            f"🔽 Downloading... {(self._current / self._total):.1%}\n"
-                            f"⚡ Speed: {get_readable_file_size(self.speed())}/s")
+                            f"🎸Dᴏᴡɴʟᴏᴀᴅɪɴɢ... {(self._current / self._total):.1%}\n"
+                            f"⚡ Sᴘᴇᴇᴅ: {get_readable_file_size(self.speed())}/s")
                     except MessageNotModifiedError:
                         logger.debug("Message not modified")
                     except ZeroDivisionError:
