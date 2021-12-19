@@ -28,7 +28,7 @@ async def inline(event: InlineQuery.Event):
                 builder.article(
                     title=match["title"],
                     text=match["link"],
-                    description=f"Artist: {match['artist']['name']}\nTracks: {match['nb_tracks']}",
+                    description=f"Aʀᴛɪsᴛ: {match['artist']['name']}\nTʀᴀᴄᴋs: {match['nb_tracks']}",
                     thumb=InputWebDocument(
                         url=match["cover_medium"],
                         size=0,
@@ -49,7 +49,7 @@ async def inline(event: InlineQuery.Event):
                 builder.article(
                     title=match["title"],
                     text=match["link"],
-                    description=f"Artist: {match['artist']['name']}\nAlbum: {match['album']['title']}",
+                    description=f"Aʀᴛɪsᴛ: {match['artist']['name']}\nAʟʙᴜᴍ: {match['album']['title']}",
                     thumb=InputWebDocument(
                         url=match["album"]["cover_medium"],
                         size=0,
