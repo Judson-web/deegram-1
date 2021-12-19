@@ -8,8 +8,8 @@ from .. import bot, users
 
 search_buttons = [
     [
-        Button.switch_inline("Search track 🎧", same_peer=True),
-        Button.switch_inline("Search album 💽", query=".a: ", same_peer=True),
+        Button.switch_inline("Sᴇᴀʀᴄʜ ᴛʀᴀᴄᴋ 🎧", same_peer=True),
+        Button.switch_inline("Sᴇᴀʀᴄʜ ᴀʟʙᴜᴍ 💽", query=".a: ", same_peer=True),
     ],
     [Button.inline("❌")],
 ]
@@ -23,7 +23,7 @@ async def settings(event: Union[NewMessage.Event, CallbackQuery.Event]):
         answer = event.respond
     await answer(
         "Settings:",
-        buttons=[[Button.inline("Quality 🎧", data="q")], [Button.inline("❌")]],
+        buttons=[[Button.inline("Qᴜᴀʟɪᴛʏ 🎧", data="q")], [Button.inline("❌")]],
     )
     raise StopPropagation
 
@@ -62,10 +62,10 @@ async def callback(event: CallbackQuery.Event):
     q = event.data.decode("utf-8")
     if users[event.query.user_id]["quality"] != q:
         users[event.query.user_id]["quality"] = q
-        await event.answer("Done!")
+        await event.answer("Dᴏɴᴇ!")
         await settings_quality(event)
     else:
-        await event.answer("Already selected!")
+        await event.answer("Aʟʀᴇᴀᴅʏ sᴇʟᴇᴄᴛᴇᴅ!")
 
 
 @bot.on(CallbackQuery(pattern="❌"))
