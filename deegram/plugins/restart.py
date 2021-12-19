@@ -19,7 +19,7 @@ if path.exists('restart.pickle'):
 
 @bot.on(NewMessage(pattern='/restart', from_users=OWNER_ID))
 async def restart(event):
-    restart_message = await event.reply("Restarting, Please wait!")
+    restart_message = await event.reply("Rᴇsᴛᴀʀᴛɪɴɢ, Pʟᴇᴀsᴇ ᴡᴀɪᴛ!")
     with open('restart.pickle', 'wb') as status:
         pickle.dump([event.chat_id, restart_message.id], status)
     logger.info('Restarting deegram')
