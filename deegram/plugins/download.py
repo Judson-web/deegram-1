@@ -14,7 +14,7 @@ async def track_link(event: NewMessage.Event):
     try:
         track = deethon.Track(event.pattern_match.group(1))
     except deethon.errors.DeezerApiError:
-        await event.reply("Track not found.")
+        await event.reply("Tʀᴀᴄᴋ ɴᴏᴛ ғᴏᴜɴᴅ.")
         raise StopPropagation
     await event.respond(
         translate.TRACK_MSG.format(
