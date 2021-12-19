@@ -1,6 +1,6 @@
 VERSION = "0.2.4"
-CREATOR = "@finite_xd"
-BOT_NAME = "FINITE MUSIC"
+CREATOR = "@VAMPIRE_KING_NO_1"
+BOT_NAME = "𝙱𝚕𝚊𝚌𝚔 𝙲𝚊𝚝"
 YOUTUBE = "https://www.youtube.com/channel/UCigq8CVltGNAM-hs6cAC8mw"
 WELCOME_MSG = (
     f"Hᴀɪ,Aᴍ ᴀ YᴏᴜTᴜʙᴇ Dᴏᴡɴʟᴏᴀᴅᴇʀ Bᴏᴛ I Cᴀɴ Dᴏᴡɴʟᴏᴀᴅ Sᴏɴɢs,Vɪᴅᴇᴏs & Lʏʀɪᴄs Fʀᴏᴍ YᴏᴜTᴜʙᴇ ᴀɴᴅ ᴜᴘʟᴏᴀᴅ ɪɴᴛᴏ Tᴇʟᴇɢʀᴀᴍ.\n\n"
