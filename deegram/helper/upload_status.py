@@ -28,7 +28,7 @@ class UploadStatus:
 
     async def start(self) -> None:
         self._start_time = time.time()
-        self._message = await self._event.reply("Uploading...")
+        self._message = await self._event.reply("`🎸Uᴘʟᴏᴀᴅɪɴɢ.....💞Pʟᴢ Wᴀɪᴛ`")
         self.task = bot.loop.create_task(self._on_upload_progress())
 
     async def _on_upload_progress(self) -> None:
@@ -37,10 +37,10 @@ class UploadStatus:
                 if self._total:
                     msg = ""
                     if self._track_count:
-                        msg += f" 💿 Track {self._track_count} of {self._total_tracks}\n"
+                        msg += f" 💿 Tʀᴀᴄᴋ {self._track_count} of {self._total_tracks}\n"
                     msg += (
-                        f"🔼 Uploading... {(self._current / self._total):.1%}\n"
-                        f"⚡ Speed: {get_readable_file_size(self.speed())}/s"
+                        f"🎸Uᴘʟᴏᴀᴅɪɴɢ..... {(self._current / self._total):.1%}\n"
+                        f"⚡ Sᴘᴇᴇᴅ: {get_readable_file_size(self.speed())}/s"
                     )
                     try:
                         await self._message.edit(msg)
